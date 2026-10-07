@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Auditoría Portafolio PNE 2026</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- ENCABEZADO INSTITUCIONAL -->
+  <header class="main-header">
+    <div class="header-left">
+      <div class="logo-brand">
+        <span class="logo-initials">F</span>
+      </div>
+      <div class="header-title">
+        <h1>Fondo Mixto de Cultura de Boyacá  (FMCB)</h1>
+        <p class="subtitle">AUDITORÍA PORTAFOLIO PNE 2026 · HABILITADAS 2025</p>
+      </div>
+    </div>
+    
+    <div class="header-graphic"></div>
+  </header>
+
+  <!-- MIGA DE PAN / BREADCRUMB -->
+  <div class="breadcrumb-bar">
+    <span>AUDITORÍA</span> <span class="sep">/</span> <span class="active-page">INICIO</span>
+  </div>
+
+  <!-- SECCIÓN PRINCIPAL -->
+  <section>
+    
+    <!-- CONTENIDO CENTRAL (85%) -->
+    <article>
+      <iframe name="marco_contenido" src="html/inicio_contenido.html" frameborder="0"></iframe>
+    </article>
+
+    <!-- MENÚ LATERAL (15%) -->
+    <nav>
+      <div class="nav-header">NAVEGACIÓN</div>
+      <ul>
+        <li>
+          <a href="html/inicio_contenido.html" target="marco_contenido" class="active" data-label="INICIO">01 INICIO</a>
+        </li>
+        <li>
+          <a href="html/habilitadas_2025.html" target="marco_contenido" data-label="HABILITADAS 2025">02 HABILITADAS 2025</a>
+        </li>
+        <li>
+          <a href="html/portafolio_pne2026.html" target="marco_contenido" data-label="PORTAFOLIO PNE 2026">03 PORTAFOLIO PNE 2026</a>
+        </li>
+        <li>
+          <a href="html/sinac_pne.html" target="marco_contenido" data-label="SINAC Y SINAC-PNE">04 SINAC y PNE*</a>
+        </li>
+        <li>
+          <a href="html/mapa_conceptual.html" target="marco_contenido" data-label="MAPA CONCEPTUAL">05 RECORDATORIOS*</a>
+        </li>
+      </ul>
+
+      <div class="sidebar-quote">
+        <span class="quote-mark">“</span>
+        <p>Cada día es una nueva oportunidad para acercarte a tus metas.</p>
+      </div>
+    </nav>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-container">
+      
+      <div class="footer-item">
+        <span class="icon-circle">✉</span>
+        <div class="footer-text">
+          <span class="footer-label">COORDINACIÓN</span>
+          <a href="mailto:coordinacionestimulos.paola@fondocultura.org">coordinacionestimulos.paola@fondocultura.org</a>
+        </div>
+      </div>
+
+      <div class="footer-divider"></div>
+
+      <div class="footer-item">
+        <span class="icon-circle">✉</span>
+        <div class="footer-text">
+          <span class="footer-label">PLATAFORMAS</span>
+          <a href="mailto:plataformas.estimulos@fondocultura.org">plataformas.estimulos@fondocultura.org</a>
+        </div>
+      </div>
+
+      <div class="footer-divider"></div>
+
+      <div class="footer-item">
+        <span class="icon-circle">📁</span>
+        <div class="footer-text">
+          <span class="footer-label">DRIVE</span>
+          <a href="https://drive.google.com/drive/folders/1xzVXRv1GwxfGoVeIL99Zfc0EuawCIDAt" target="_blank">PORTAFOLIO PNE 2026</a>
+        </div>
+      </div>
+
+      <div class="footer-divider"></div>
+
+      <div class="footer-item">
+        <span class="icon-circle">📍</span>
+        <div class="footer-text font-bold">
+          BOGOTÁ, COLOMBIA
+        </div>
+      </div>
+
+      <div class="footer-divider"></div>
+
+      <div class="footer-item copyright">
+        © 2026 PLATAFORMAS
+      </div>
+
+    </div>
+  </footer>
+
+  <script>
+    const links = document.querySelectorAll('nav a');
+    const breadcrumbActive = document.querySelector('.breadcrumb-bar .active-page');
+
+    links.forEach(link => {
+      link.addEventListener('click', function() {
+        links.forEach(l => l.classList.remove('active'));
+        this.classList.add('active');
+        if (breadcrumbActive && this.dataset.label) {
+          breadcrumbActive.textContent = this.dataset.label;
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>

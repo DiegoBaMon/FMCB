@@ -220,21 +220,21 @@
 /* ==========================================
    6. NUEVAS REGLAS: ALINEAR TARJETA E IMAGEN A LA DERECHA
    ========================================== */
-/* ==========================================
-   6. NUEVAS REGLAS: ALINEAR TARJETA E IMAGEN A LA DERECHA
-   ========================================== */
 /* Línea 179*/ .main-content {
 /* Línea 180*/   display: flex; 
 /* Línea 181*/   flex-direction: row; /* NUEVO: Obliga a que sea horizontal */
 /* Línea 182*/   flex-wrap: nowrap; /* NUEVO: Prohíbe que los elementos bajen de línea */
-/* Línea 183*/   align-items: flex-start; 
-/* Línea 184*/   gap: 30px; 
-/* Línea 185*/   margin-top: 20px; 
+/* Línea 183*/   align-items: center;
+/* Línea 184*/   justify-content: center; /* Centra horizontalmente */   
+/* Línea 184*/   gap: 20px; 
+/* Línea 185*/   margin-top: 30px;
+/* Línea 187*/   padding: 0 20px; /* Un poco de aire a los lados */   
 /* Línea 186*/ }
 
 /* Línea 188*/ .main-content .card {
 /* Línea 189*/   margin-top: 0; 
-/* Línea 190*/   flex: 1; /* Ocupa el espacio restante */
+/* Línea 190*/   flex: 0 0 auto; 
+/* Línea 193*/   max-width: 500px; /* No más de 500px */
 /* Línea 191*/   min-width: 0; /* NUEVO: Evita que la tarjeta desborde y empuje la imagen hacia abajo */
 /* Línea 192*/ }
 

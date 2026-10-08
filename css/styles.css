@@ -1,286 +1,306 @@
 /* ==========================================
    1. RESETEO Y VARIABLES
    ========================================== */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+/* Línea 1 */ * {
+/* Línea 2 */   margin: 0; /* Quita los márgenes por defecto de todos los elementos */
+/* Línea 3 */   padding: 0; /* Quita los rellenos por defecto de todos los elementos */
+/* Línea 4 */   box-sizing: border-box; /* Incluye bordes y rellenos en el cálculo del ancho total */
+/* Línea 5 */ }
 
-:root {
-  --bg-crema: #f7f3e8;
-  --bg-verde-oscuro: #08211a;
-  --bg-verde-nav: #0a2920;
-  --color-naranja: #d05a3f;
-  --color-texto-oscuro: #1c2b26;
-  --color-texto-claro: #ffffff;
-  --color-texto-mutado: #9db2a9;
-}
+/* Línea 6 */ :root {
+/* Línea 7 */   --bg-crema: #f7f3e8; /* Variable para el color crema del fondo */
+/* Línea 8 */   --bg-verde-oscuro: #08211a; /* Variable para el color verde oscuro */
+/* Línea 9 */   --bg-verde-nav: #0a2920; /* Variable para el verde de la navegación */
+/* Línea 10 */  --color-naranja: #d05a3f; /* Variable para detalles en naranja */
+/* Línea 11 */  --color-texto-oscuro: #1c2b26; /* Variable para texto principal */
+/* Línea 12 */  --color-texto-claro: #ffffff; /* Variable para texto blanco */
+/* Línea 13 */  --color-texto-mutado: #9db2a9; /* Variable para textos secundarios */
+/* Línea 14 */ }
 
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  background-color: var(--bg-crema);
-  overflow: hidden;
-}
+/* Línea 15 */ body {
+/* Línea 16 */   font-family: Arial, Helvetica, sans-serif; /* Define la tipografía base */
+/* Línea 17 */   display: flex; /* Activa la disposición en contenedor flexible */
+/* Línea 18 */   flex-direction: column; /* Organiza el header, centro y footer en columna */
+/* Línea 19 */   height: 100vh; /* Ocupa el 100% de la altura de la pantalla */
+/* Línea 20 */   background-color: var(--bg-crema); /* Aplica el fondo crema */
+/* Línea 21 */   overflow: hidden; /* Oculta barras de desplazamiento del cuerpo general */
+/* Línea 22 */ }
 
 /* ==========================================
    2. ENCABEZADO PRINCIPAL (HEADER)
    ========================================== */
-.main-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  height: 85px;
-  background-color: var(--bg-crema);
-  padding: 0 30px;
-  border-bottom: 1px solid #e2ddd0;
-  position: relative;
-  overflow: hidden;
-}
+/* Línea 23 */ .main-header {
+/* Línea 24 */   display: flex; /* Flexbox para alinear elementos del header */
+/* Línea 25 */   align-items: center; /* Centra verticalmente los logos y títulos */
+/* Línea 26 */   justify-content: space-between; /* Separa los extremos del header */
+/* Línea 27 */   width: 100%; /* Ocupa todo el ancho */
+/* Línea 28 */   height: 85px; /* Define altura fija para la barra superior */
+/* Línea 29 */   background-color: var(--bg-crema); /* Fondo del header */
+/* Línea 30 */   padding: 0 30px; /* Margen interno a los lados */
+/* Línea 31 */   border-bottom: 1px solid #e2ddd0; /* Línea divisoria inferior */
+/* Línea 32 */   position: relative; /* Permite posicionar elementos absolutos dentro */
+/* Línea 33 */   overflow: hidden; /* Corta lo que sobresalga del header */
+/* Línea 34 */ }
 
-.header-left {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  z-index: 2;
-}
+/* Línea 35 */ .header-left {
+/* Línea 36 */   display: flex; /* Flexbox para alinear logo y título horizontalmente */
+/* Línea 37 */   align-items: center; /* Centra verticalmente */
+/* Línea 38 */   gap: 20px; /* Espacio de 20px entre el logo y el texto */
+/* Línea 39 */   z-index: 2; /* Mantiene el texto por encima del gráfico decorativo */
+/* Línea 40 */ }
 
-.logo-brand {
-  width: 45px;
-  height: 45px;
-  border-right: 1px solid #d0cbbe;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding-right: 20px;
-}
+/* Línea 41 */ .logo-brand {
+/* Línea 42 */   width: 45px; /* Ancho de la caja del logo */
+/* Línea 43 */   height: 45px; /* Alto de la caja del logo */
+/* Línea 44 */   border-right: 1px solid #d0cbbe; /* Línea vertical divisoria a la derecha */
+/* Línea 45 */   display: flex; /* Flexbox para centrar las iniciales */
+/* Línea 46 */   align-items: center; /* Centra verticalmente */
+/* Línea 47 */   justify-content: center; /* Centra horizontalmente */
+/* Línea 48 */   padding-right: 20px; /* Espaciado interno derecho */
+/* Línea 49 */ }
 
-.logo-initials {
-  font-family: 'Georgia', serif;
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: #0a251c;
-  letter-spacing: -2px;
-}
+/* Línea 50 */ .logo-initials {
+/* Línea 51 */   font-family: 'Georgia', serif; /* Fuente elegante para las iniciales */
+/* Línea 52 */   font-size: 1.8rem; /* Tamaño de letra grande */
+/* Línea 53 */   font-weight: bold; /* Texto en negrita */
+/* Línea 54 */   color: #0a251c; /* Color verde muy oscuro */
+/* Línea 55 */   letter-spacing: -2px; /* Junta las letras un poco */
+/* Línea 56 */ }
 
-.header-title h1 {
-  font-family: 'Georgia', serif;
-  font-size: 1.7rem;
-  font-weight: normal;
-  color: var(--color-texto-oscuro);
-  line-height: 1.1;
-}
+/* Línea 57 */ .header-title h1 {
+/* Línea 58 */   font-family: 'Georgia', serif; /* Fuente elegante para el título del header */
+/* Línea 59 */   font-size: 1.7rem; /* Tamaño del título */
+/* Línea 60 */   font-weight: normal; /* Peso normal para no sobrecargar */
+/* Línea 61 */   color: var(--color-texto-oscuro); /* Color oscuro del texto */
+/* Línea 62 */   line-height: 1.1; /* Altura de línea ajustada */
+/* Línea 63 */ }
 
-.header-title .subtitle {
-  font-size: 0.65rem;
-  letter-spacing: 1.5px;
-  color: #7a8a83;
-  margin-top: 4px;
-  font-weight: bold;
-}
+/* Línea 64 */ .header-title .subtitle {
+/* Línea 65 */   font-size: 0.65rem; /* Letra pequeña para subtítulo */
+/* Línea 66 */   letter-spacing: 1.5px; /* Espaciado entre letras */
+/* Línea 67 */   color: #7a8a83; /* Color gris verdoso */
+/* Línea 68 */   margin-top: 4px; /* Separación con el h1 de arriba */
+/* Línea 69 */   font-weight: bold; /* Texto en negrita */
+/* Línea 70 */ }
 
-.header-graphic {
-  position: absolute;
-  right: 0;
-  top: 0;
-  width: 300px;
-  height: 100%;
-  background: radial-gradient(circle at 80% 20%, rgba(10, 41, 32, 0.85) 0%, rgba(8, 33, 26, 1) 100%);
-  clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 0% 100%);
-  z-index: 1;
-}
+/* Línea 71 */ .header-graphic {
+/* Línea 72 */   position: absolute; /* Posicionamiento flotante a la derecha */
+/* Línea 73 */   right: 0; /* Pegado a la derecha */
+/* Línea 74 */   top: 0; /* Pegado arriba */
+/* Línea 75 */   width: 300px; /* Ancho del adorno gráfico */
+/* Línea 76 */   height: 100%; /* Ocupa todo el alto del header */
+/* Línea 77 */   background: radial-gradient(circle at 80% 20%, rgba(10, 41, 32, 0.85) 0%, rgba(8, 33, 26, 1) 100%); /* Degradado verde */
+/* Línea 78 */   clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 0% 100%); /* Recorta el fondo en forma de diagonal */
+/* Línea 79 */   z-index: 1; /* Fondo por detrás del texto del header */
+/* Línea 80 */ }
 
 /* ==========================================
    3. BREADCRUMB
    ========================================== */
-.breadcrumb-bar {
-  font-size: 0.65rem;
-  font-weight: bold;
-  letter-spacing: 1px;
-  padding: 8px 30px;
-  background-color: var(--bg-crema);
-  color: #8c9992;
-  border-bottom: 1px solid #eae5d9;
-}
+/* Línea 81 */ .breadcrumb-bar {
+/* Línea 82 */   font-size: 0.65rem; /* Tamaño pequeño de texto para la miga de pan */
+/* Línea 83 */   font-weight: bold; /* Texto en negrita */
+/* Línea 84 */   letter-spacing: 1px; /* Espaciado entre caracteres */
+/* Línea 85 */   padding: 8px 30px; /* Relleno superior/inferior y lateral */
+/* Línea 86 */   background-color: var(--bg-crema); /* Fondo crema */
+/* Línea 87 */   color: #8c9992; /* Color de texto suave */
+/* Línea 88 */   border-bottom: 1px solid #eae5d9; /* Línea gris de separación */
+/* Línea 89 */ }
 
-.breadcrumb-bar .sep {
-  margin: 0 4px;
-  color: #ccc;
-}
+/* Línea 90 */ .breadcrumb-bar .sep {
+/* Línea 91 */   margin: 0 4px; /* Margen a los lados de los separadores "/" o ">" */
+/* Línea 92 */   color: #ccc; /* Color gris claro */
+/* Línea 93 */ }
 
-.breadcrumb-bar .active-page {
-  color: var(--color-naranja);
-}
+/* Línea 94 */ .breadcrumb-bar .active-page {
+/* Línea 95 */   color: var(--color-naranja); /* Resalta la página actual en naranja */
+/* Línea 96 */ }
 
 /* ==========================================
    4. ESTRUCTURA CENTRAL
    ========================================== */
-body > section {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  flex: 1;
-  overflow: hidden;
-}
+/* Línea 97 */ body > section {
+/* Línea 98 */   display: flex; /* Alinea el menú lateral (nav) y el artículo en fila */
+/* Línea 99 */   flex-direction: row; /* Disposición en fila */
+/* Línea 100*/   width: 100%; /* Ocupa todo el ancho */
+/* Línea 101*/   flex: 1; /* Ocupa todo el espacio vertical restante entre header y footer */
+/* Línea 102*/   overflow: hidden; /* Evita desbordamientos */
+/* Línea 103*/ }
 
-article {
-  width: 85%;
-  height: 100%;
-  background-color: var(--bg-crema);
-  padding: 10px;
-}
+/* Línea 104*/ article {
+/* Línea 105*/   width: 85%; /* El área principal ocupa el 85% del ancho */
+/* Línea 106*/   height: 100%; /* Alto completo */
+/* Línea 107*/   background-color: var(--bg-crema); /* Fondo crema */
+/* Línea 108*/   padding: 10px; /* Relleno interno */
+/* Línea 109*/ }
 
-article iframe {
-  width: 100%;
-  height: 100%;
-  border: none;
-  background-color: transparent;
-}
+/* Línea 110*/ article iframe {
+/* Línea 111*/   width: 100%; /* El iframe ocupa todo el ancho del artículo */
+/* Línea 112*/   height: 100%; /* Ocupa todo el alto */
+/* Línea 113*/   border: none; /* Elimina bordes del marco */
+/* Línea 114*/   background-color: transparent; /* Fondo transparente */
+/* Línea 115*/ }
 
 /* ==========================================
    5. MENÚ LATERAL Y ESTILO DE SELECCIÓN
    ========================================== */
-nav {
-  width: 15%;
-  min-width: 210px;
-  background-color: var(--bg-verde-nav);
-  padding: 25px 0; /* Padding vertical solo para los bordes completos */
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
+/* Línea 116*/ nav {
+/* Línea 117*/   width: 15%; /* Ocupa el 15% del ancho de la pantalla */
+/* Línea 118*/   min-width: 210px; /* Ancho mínimo para que no se colapse */
+/* Línea 119*/   background-color: var(--bg-verde-nav); /* Fondo verde para el menú */
+/* Línea 120*/   padding: 25px 0; /* Padding vertical solo arriba y abajo */
+/* Línea 121*/   display: flex; /* Contenedor flex para organizar enlaces y cita */
+/* Línea 122*/   flex-direction: column; /* Coloca los enlaces en columna */
+/* Línea 123*/   justify-content: space-between; /* Empuja la cita hacia la parte inferior */
+/* Línea 124*/ }
 
-.nav-header {
-  font-size: 0.65rem;
-  letter-spacing: 1.5px;
-  color: #4e7365;
-  margin-bottom: 15px;
-  padding: 0 15px;
-  font-weight: bold;
-}
+/* Línea 125*/ .nav-header {
+/* Línea 126*/   font-size: 0.65rem; /* Tamaño de fuente para el título del menú */
+/* Línea 127*/   letter-spacing: 1.5px; /* Espaciado entre letras */
+/* Línea 128*/   color: #4e7365; /* Color del texto del título de menú */
+/* Línea 129*/   margin-bottom: 15px; /* Margen inferior */
+/* Línea 130*/   padding: 0 15px; /* Padding a los lados */
+/* Línea 131*/   font-weight: bold; /* Texto en negrita */
+/* Línea 132*/ }
 
-nav ul {
-  list-style-type: none;
-}
+/* Línea 133*/ nav ul {
+/* Línea 134*/   list-style-type: none; /* Quita los puntos de la lista */
+/* Línea 135*/ }
 
-nav li {
-  margin-bottom: 4px;
-}
+/* Línea 136*/ nav li {
+/* Línea 137*/   margin-bottom: 4px; /* Separación entre botones de la lista */
+/* Línea 138*/ }
 
-nav a {
-  display: block;
-  text-decoration: none;
-  color: #c0cfc8;
-  font-size: 0.8rem;
-  font-weight: bold;
-  padding: 12px 15px;
-  transition: all 0.2s ease;
-  border-left: 4px solid transparent;
-  border-bottom: 1px solid transparent;
-}
+/* Línea 139*/ nav a {
+/* Línea 140*/   display: block; /* Ocupa todo el ancho de su contenedor li */
+/* Línea 141*/   text-decoration: none; /* Sin subrayado de enlace */
+/* Línea 142*/   color: #c0cfc8; /* Color de texto claro/grisáceo */
+/* Línea 143*/   font-size: 0.8rem; /* Tamaño de fuente */
+/* Línea 144*/   font-weight: bold; /* Texto en negrita */
+/* Línea 145*/   padding: 12px 15px; /* Tamaño del área interactiva/clicable */
+/* Línea 146*/   transition: all 0.2s ease; /* Transición suave para el efecto hover */
+/* Línea 147*/   border-left: 4px solid transparent; /* Reserva borde izquierdo transparente */
+/* Línea 148*/   border-bottom: 1px solid transparent; /* Reserva borde inferior transparente */
+/* Línea 149*/ }
 
-nav a:hover {
-  color: #ffffff;
-  background-color: rgba(255, 255, 255, 0.03);
-}
+/* Línea 150*/ nav a:hover {
+/* Línea 151*/   color: #ffffff; /* Texto pasa a blanco puro al pasar el ratón */
+/* Línea 152*/   background-color: rgba(255, 255, 255, 0.03); /* Fondo ligeramente iluminado */
+/* Línea 153*/ }
 
-/* ESTADO SELECCIONADO (Borde vertical + línea horizontal en naranja) */
-nav a.active {
-  color: var(--color-naranja);
-  background-color: rgba(0, 0, 0, 0.15);
-  border-left: 4px solid var(--color-naranja);
-  border-bottom: 2px solid var(--color-naranja);
-}
+/* Línea 154*/ nav a.active {
+/* Línea 155*/   color: var(--color-naranja); /* Cambia el texto a naranja en la opción activa */
+/* Línea 156*/   background-color: rgba(0, 0, 0, 0.15); /* Fondo oscuro resaltado */
+/* Línea 157*/   border-left: 4px solid var(--color-naranja); /* Borde vertical naranja activo */
+/* Línea 158*/   border-bottom: 2px solid var(--color-naranja); /* Borde horizontal naranja activo */
+/* Línea 159*/ }
 
-/* Cita inferior nav */
-.sidebar-quote {
-  margin: 20px 15px 0 15px;
-  padding-top: 15px;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
-}
+/* Línea 160*/ .sidebar-quote {
+/* Línea 161*/   margin: 20px 15px 0 15px; /* Márgenes alrededor de la cita inferior */
+/* Línea 162*/   padding-top: 15px; /* Espacio sobre el texto */
+/* Línea 163*/   border-top: 1px solid rgba(255, 255, 255, 0.08); /* Línea divisoria muy suave */
+/* Línea 164*/ }
 
-.sidebar-quote .quote-mark {
-  font-size: 1.8rem;
-  color: var(--color-naranja);
-  line-height: 0.8;
-  display: block;
-  margin-bottom: 4px;
-}
+/* Línea 165*/ .sidebar-quote .quote-mark {
+/* Línea 166*/   font-size: 1.8rem; /* Tamaño grande para la comilla */
+/* Línea 167*/   color: var(--color-naranja); /* Comilla de color naranja */
+/* Línea 168*/   line-height: 0.8; /* Ajusta la altura para no desplazar el texto */
+/* Línea 169*/   display: block; /* Se muestra en su propia línea */
+/* Línea 170*/   margin-bottom: 4px; /* Separación con el texto */
+/* Línea 171*/ }
 
-.sidebar-quote p {
-  font-family: 'Georgia', serif;
-  font-size: 0.72rem;
-  color: #a2b5ac;
-  line-height: 1.35;
-  font-style: italic;
-}
+/* Línea 172*/ .sidebar-quote p {
+/* Línea 173*/   font-family: 'Georgia', serif; /* Fuente cursiva elegante */
+/* Línea 174*/   font-size: 0.72rem; /* Tamaño pequeño */
+/* Línea 175*/   color: #a2b5ac; /* Verde apagado */
+/* Línea 176*/   line-height: 1.35; /* Interlineado */
+/* Línea 177*/   font-style: italic; /* Estilo cursiva */
+/* Línea 178*/ }
 
 /* ==========================================
-   6. FOOTER INSTITUCIONAL
+   6. NUEVAS REGLAS: ALINEAR TARJETA E IMAGEN A LA DERECHA
    ========================================== */
-footer {
-  background-color: var(--bg-verde-oscuro);
-  color: #ffffff;
-  padding: 10px 20px;
-  width: 100%;
-  font-size: 0.68rem;
-  border-top: 1px solid #103328;
-}
+/* Línea 179*/ .main-content {
+/* Línea 180*/   display: flex; /* CAMBIO CLAVE: Permite poner la card y la imagen al lado */
+/* Línea 181*/   align-items: flex-start; /* Alinea card e imagen por la parte superior */
+/* Línea 182*/   gap: 30px; /* Crea una separación de 30px entre la card y la imagen */
+/* Línea 183*/   margin-top: 20px; /* Separa el bloque completo del contenido superior */
+/* Línea 184*/ }
 
-.footer-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-}
+/* Línea 185*/ .main-content .card {
+/* Línea 186*/   margin-top: 0; /* Elimina margen superior para alinearse con la imagen */
+/* Línea 187*/   flex: 1; /* Permite que la tarjeta ocupe el espacio disponible */
+/* Línea 188*/ }
 
-.footer-item {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
+/* Línea 189*/ .img-derecha {
+/* Línea 190*/   max-width: 450px; /* Controla el tamaño máximo de la imagen de Estímulos */
+/* Línea 191*/   height: auto; /* Mantiene las proporciones originales sin deformarse */
+/* Línea 192*/   border-radius: 6px; /* Redondea los bordes para igualar la tarjeta */
+/* Línea 193*/   object-fit: contain; /* Ajusta la imagen dentro del contenedor */
+/* Línea 194*/ }
 
-.icon-circle {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 24px;
-  height: 24px;
-  border: 1px solid var(--color-naranja);
-  border-radius: 50%;
-  color: #ffffff;
-  font-size: 0.65rem;
-}
+/* ==========================================
+   7. FOOTER INSTITUCIONAL
+   ========================================== */
+/* Línea 195*/ footer {
+/* Línea 196*/   background-color: var(--bg-verde-oscuro); /* Fondo verde muy oscuro */
+/* Línea 197*/   color: #ffffff; /* Texto blanco */
+/* Línea 198*/   padding: 10px 20px; /* Espaciado interno */
+/* Línea 199*/   width: 100%; /* Ocupa todo el ancho */
+/* Línea 200*/   font-size: 0.68rem; /* Tamaño de letra diminuto para el pie */
+/* Línea 201*/   border-top: 1px solid #103328; /* Línea de borde superior */
+/* Línea 202*/ }
 
-.footer-text {
-  display: flex;
-  flex-direction: column;
-}
+/* Línea 203*/ .footer-container {
+/* Línea 204*/   display: flex; /* Alinea los elementos del pie de página horizontalmente */
+/* Línea 205*/   align-items: center; /* Centra elementos verticalmente */
+/* Línea 206*/   justify-content: space-between; /* Distribuye espacio uniforme entre elementos */
+/* Línea 207*/   width: 100%; /* Ancho completo */
+/* Línea 208*/ }
 
-.footer-label {
-  font-size: 0.58rem;
-  color: var(--color-naranja);
-  font-weight: bold;
-  letter-spacing: 0.5px;
-}
+/* Línea 209*/ .footer-item {
+/* Línea 210*/   display: flex; /* Junta icono y texto del ítem horizontalmente */
+/* Línea 211*/   align-items: center; /* Centra icono y texto verticalmente */
+/* Línea 212*/   gap: 8px; /* Espacio de 8px entre icono y texto */
+/* Línea 213*/ }
 
-.footer-text a {
-  color: #ffffff;
-  text-decoration: none;
-}
+/* Línea 214*/ .icon-circle {
+/* Línea 215*/   display: flex; /* Flexbox para centrar el icono dentro de un círculo */
+/* Línea 216*/   align-items: center; /* Centra verticalmente */
+/* Línea 217*/   justify-content: center; /* Centra horizontalmente */
+/* Línea 218*/   width: 24px; /* Diámetro horizontal del círculo */
+/* Línea 219*/   height: 24px; /* Diámetro vertical del círculo */
+/* Línea 220*/   border: 1px solid var(--color-naranja); /* Borde circular naranja */
+/* Línea 221*/   border-radius: 50%; /* Hace que la caja sea un círculo perfecto */
+/* Línea 222*/   color: #ffffff; /* Icono o texto interno en blanco */
+/* Línea 223*/   font-size: 0.65rem; /* Tamaño del icono interno */
+/* Línea 224*/ }
 
-.footer-divider {
-  width: 1px;
-  height: 20px;
-  background-color: rgba(255, 255, 255, 0.15);
-}
+/* Línea 225*/ .footer-text {
+/* Línea 226*/   display: flex; /* Organiza la etiqueta y el enlace del footer */
+/* Línea 227*/   flex-direction: column; /* Alinea etiqueta arriba y texto abajo */
+/* Línea 228*/ }
 
-.copyright {
-  color: #a2b5ac;
-  font-weight: bold;
-  letter-spacing: 0.5px;
-}
+/* Línea 229*/ .footer-label {
+/* Línea 230*/   font-size: 0.58rem; /* Tamaño de letra de etiqueta */
+/* Línea 231*/   color: var(--color-naranja); /* Color naranja */
+/* Línea 232*/   font-weight: bold; /* Texto en negrita */
+/* Línea 233*/   letter-spacing: 0.5px; /* Espaciado entre caracteres */
+/* Línea 234*/ }
+
+/* Línea 235*/ .footer-text a {
+/* Línea 236*/   color: #ffffff; /* Color blanco para los enlaces del footer */
+/* Línea 237*/   text-decoration: none; /* Sin subrayado de enlace */
+/* Línea 238*/ }
+
+/* Línea 239*/ .footer-divider {
+/* Línea 240*/   width: 1px; /* Ancho de la barra divisoria */
+/* Línea 241*/   height: 20px; /* Altura de la barra divisoria */
+/* Línea 242*/   background-color: rgba(255, 255, 255, 0.15); /* Color blanco semi-transparente */
+/* Línea 243*/ }
+
+/* Línea 244*/ .copyright {
+/* Línea 245*/   color: #a2b5ac; /* Color de texto del copyright */
+/* Línea 246*/   font-weight: bold; /* Texto en negrita */
+/* Línea 247*/   letter-spacing: 0.5px; /* Espaciado suave entre letras */
+/* Línea 248*/ }

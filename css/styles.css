@@ -220,25 +220,32 @@
 /* ==========================================
    6. NUEVAS REGLAS: ALINEAR TARJETA E IMAGEN A LA DERECHA
    ========================================== */
+/* ==========================================
+   6. NUEVAS REGLAS: ALINEAR TARJETA E IMAGEN A LA DERECHA
+   ========================================== */
 /* Línea 179*/ .main-content {
-/* Línea 180*/   display: flex; /* CAMBIO CLAVE: Permite poner la card y la imagen al lado */
-/* Línea 181*/   align-items: flex-start; /* Alinea card e imagen por la parte superior */
-/* Línea 182*/   gap: 30px; /* Crea una separación de 30px entre la card y la imagen */
-/* Línea 183*/   margin-top: 20px; /* Separa el bloque completo del contenido superior */
-/* Línea 184*/ }
+/* Línea 180*/   display: flex; 
+/* Línea 181*/   flex-direction: row; /* NUEVO: Obliga a que sea horizontal */
+/* Línea 182*/   flex-wrap: nowrap; /* NUEVO: Prohíbe que los elementos bajen de línea */
+/* Línea 183*/   align-items: flex-start; 
+/* Línea 184*/   gap: 30px; 
+/* Línea 185*/   margin-top: 20px; 
+/* Línea 186*/ }
 
-/* Línea 185*/ .main-content .card {
-/* Línea 186*/   margin-top: 0; /* Elimina margen superior para alinearse con la imagen */
-/* Línea 187*/   flex: 1; /* Permite que la tarjeta ocupe el espacio disponible */
-/* Línea 188*/ }
+/* Línea 188*/ .main-content .card {
+/* Línea 189*/   margin-top: 0; 
+/* Línea 190*/   flex: 1; /* Ocupa el espacio restante */
+/* Línea 191*/   min-width: 0; /* NUEVO: Evita que la tarjeta desborde y empuje la imagen hacia abajo */
+/* Línea 192*/ }
 
-/* Línea 189*/ .img-derecha {
-/* Línea 190*/   max-width: 450px; /* Controla el tamaño máximo de la imagen de Estímulos */
-/* Línea 191*/   height: auto; /* Mantiene las proporciones originales sin deformarse */
-/* Línea 192*/   border-radius: 6px; /* Redondea los bordes para igualar la tarjeta */
-/* Línea 193*/   object-fit: contain; /* Ajusta la imagen dentro del contenedor */
-/* Línea 194*/ }
-
+/* Línea 194*/ .img-derecha {
+/* Línea 195*/   flex-shrink: 0; /* NUEVO Y CLAVE: Evita que la imagen se encoja o baje de línea */
+/* Línea 196*/   max-width: 450px; 
+/* Línea 197*/   width: 100%; /* Se adapta al espacio, pero respeta el máximo de 450px */
+/* Línea 198*/   height: auto; 
+/* Línea 199*/   border-radius: 6px; 
+/* Línea 200*/   object-fit: contain; 
+/* Línea 201*/ }
 /* ==========================================
    7. FOOTER INSTITUCIONAL
    ========================================== */
